@@ -26,7 +26,7 @@ module.exports = async (req, res, next) => {
     // Chama a rota de validação do token no microserviço de usuário
     try {
       const respostaMicroservico = await axios.get(
-        `http://localhost:443/auth`,
+        `http://18.230.195.216:443/auth`,
         { headers: { Authorization: authorization } }
       );
 
