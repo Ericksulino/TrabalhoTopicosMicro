@@ -4,14 +4,14 @@ services:
 
   api:
     build:
-      context: ./CarService  # Caminho para o Dockerfile da API
-    container_name: apicar
+      context: ./UserService  # Caminho para o Dockerfile da API
+    container_name: apiuser
     ports:
       - "443:443"
     depends_on:
       - mongo
     volumes:
-      - ./CarService:/home/node/app  # Ajuste para o caminho do seu código da API
+      - ./UserService:/home/node/app  # Ajuste para o caminho do seu código da API
 
   mongo:
     image: mongo
