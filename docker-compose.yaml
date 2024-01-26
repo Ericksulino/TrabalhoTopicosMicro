@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  api:
+    build:
+      context: ./CarService  # Caminho para o Dockerfile da API
+    container_name: apicar
+    ports:
+      - "443:443"
+    volumes:
+      - ./CarService:/home/node/app  # Ajuste para o caminho do seu código da API
+
+  mongo:
+    image: mongo
+    container_name: mongodbmicro
+    restart: always
+    volumes:
+      - ./dados_mongo:/data/db
