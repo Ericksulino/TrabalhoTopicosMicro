@@ -8,6 +8,8 @@ services:
     container_name: apicar
     ports:
       - "443:443"
+    depends_on:
+      - mongo
     volumes:
       - ./CarService:/home/node/app  # Ajuste para o caminho do seu código da API
 
