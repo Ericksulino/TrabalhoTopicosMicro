@@ -29,7 +29,6 @@ const CarSchema = new mongoose.Schema({
     },
     locatario: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
         required: false,
     },
     foto: {
