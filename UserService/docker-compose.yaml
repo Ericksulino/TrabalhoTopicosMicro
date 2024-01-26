@@ -4,7 +4,7 @@ services:
   userService:
       container_name: userService
       build:
-      context: .
+      context: ./docker
       dockerfile: Dockerfile
       ports:
         - "443:443"
