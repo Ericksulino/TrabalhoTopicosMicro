@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  carService:
-    container_name: carService
+  carservice:
+    container_name: carservice
     build:
       context: .
       dockerfile: Dockerfile
