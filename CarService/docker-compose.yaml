@@ -7,10 +7,3 @@ services:
         - "443:443"
       volumes:
         - ./CarService:/home/node/app 
-
-  mongo:
-    image: mongo
-    container_name: mongodb
-    restart: always
-    volumes:
-      - ./dados_mongo:/data/db
