@@ -10,9 +10,9 @@ services:
         - "443:443"
       volumes:
         - ./UserService:/home/node/app
-  mongo:
+  mongodbmicro:
     image: mongo
-    container_name: mongodb
+    container_name: mongodbmicro
     restart: always
     volumes:
       - ./dados_mongo:/data/db
