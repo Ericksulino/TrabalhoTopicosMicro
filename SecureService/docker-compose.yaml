@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  secureService:
+      container_name: secureService
+      ports:
+        - "443:443"
+      volumes:
+        - ./SecureService:/home/node/app 
+
+  mongo:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    volumes:
+      - ./dados_mongo:/data/db
